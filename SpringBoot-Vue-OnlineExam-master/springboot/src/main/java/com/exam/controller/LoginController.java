@@ -10,12 +10,23 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 
+/**
+ * date: 2021-04-20 16:26
+ * description LoginController
+ *
+ * @author longxinglin
+ */
 @RestController
 public class LoginController {
 
     @Autowired
     private LoginServiceImpl loginService;
 
+    /**
+     * 登录功能
+     * @param login
+     * @return
+     */
     @PostMapping("/login")
     public ApiResult login(@RequestBody Login login) {
 

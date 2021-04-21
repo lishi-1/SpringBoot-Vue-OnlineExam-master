@@ -11,7 +11,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-
+/**
+ * date: 2021-04-20 16:26
+ * description AnswerController查询题库
+ *
+ * @author longxinglin
+ */
 @RestController
 public class AnswerController {
 
@@ -23,6 +28,6 @@ public class AnswerController {
        Page<AnswerVO> answerVOPage = new Page<>(page,size);
        IPage<AnswerVO> answerVOIPage = answerService.findAll(answerVOPage);
        return ApiResultHandler.buildApiResult(200,"查询所有题库",answerVOIPage);
-
     }
+
 }

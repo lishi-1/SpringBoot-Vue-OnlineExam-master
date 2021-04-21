@@ -7,6 +7,14 @@ import com.exam.util.ApiResultHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+
+
+/**
+ * date: 2021-04-20 16:26
+ * description AdminController用于对管理员的管理
+ *
+ * @author longxinglin
+ */
 @RestController
 public class AdminController {
 

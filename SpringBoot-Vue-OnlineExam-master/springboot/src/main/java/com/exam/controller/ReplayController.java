@@ -9,12 +9,23 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/**
+ * date: 2021-04-20 16:26
+ * description ReplayController留言回应
+ *
+ * @author longxinglin
+ */
 @RestController
 public class ReplayController {
 
     @Autowired
     private ReplayServiceImpl replayService;
 
+    /**
+     * 回应留言
+     * @param replay
+     * @return
+     */
     @PostMapping("/replay")
     public ApiResult add(@RequestBody Replay replay) {
         int data = replayService.add(replay);
@@ -25,6 +36,11 @@ public class ReplayController {
         }
     }
 
+    /**
+     * 根据留言id获取回应
+     * @param messageId
+     * @return
+     */
     @GetMapping("/replay/{messageId}")
     public ApiResult findAllById(@PathVariable("messageId") Integer messageId) {
         List<Replay> res = replayService.findAllById(messageId);
